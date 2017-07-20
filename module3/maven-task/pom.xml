@@ -7,6 +7,12 @@
 	<version>1.0</version>
 	<name>project_1</name>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<timestamp>${maven.build.timestamp}</timestamp>
+		<maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+	</properties>
+	
 	<dependencies>
 		<dependency>
 			<groupId>commons-collections</groupId>
@@ -38,8 +44,7 @@
             </goals>
           </execution>
         </executions>
-      </plugin>
-	  
+      </plugin>  
 	  <plugin>
           <groupId>org.apache.maven.plugins</groupId>
           <artifactId>maven-compiler-plugin</artifactId>
