@@ -40,12 +40,12 @@
 
  <!-- Test -->
   <target name="junit" depends="compile">
-	<junit printsummary="yes" haltonfailure="yes" fork="true">
+	<junit printsummary="yes" haltonfailure="no" fork="true">
         <classpath>
 			<path refid="libs"/>
 		</classpath>
 		<batchtest>
-			<pathelement location="${src_test}"/>
+			<fileset  dir="${src_test}"/>
         </batchtest>
         <formatter type="plain" usefile="false" />
         <batchtest>
