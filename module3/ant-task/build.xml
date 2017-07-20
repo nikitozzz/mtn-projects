@@ -40,11 +40,13 @@
 
  <!-- Test -->
   <target name="junit" depends="compile">
-	<junit printsummary="on" haltonfailure="yes" fork="true">
+	<junit printsummary="yes" haltonfailure="yes" fork="true">
         <classpath>
 			<path refid="libs"/>
+		</classpath>
+		<batchtest>
 			<pathelement location="${src_test}"/>
-         </classpath>
+        </batchtest>
         <formatter type="plain" usefile="false" />
         <batchtest>
             <fileset dir="${src_test}" includes="**/*.java" />
@@ -59,5 +61,4 @@
     <tar destfile="${dist}/testProject.tar" basedir="${dist}"/>
     <echo>#Distribution#</echo>
   </target>
-
 </project>
