@@ -81,8 +81,8 @@
                 <configuration>
                     <hostname>${wildfly-hostname}</hostname>
                     <port>${wildfly-port}</port>
-                    <username>kamyshev</username>
-                    <password>metalfan</password>
+                    <username>admin</username>
+                    <password>admin</password>
                     <name>${wildfly-name}</name>
                 </configuration>
         </plugin>
