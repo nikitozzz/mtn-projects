@@ -57,7 +57,7 @@
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
-                    <finalName>${project.version}-${maven.build.timestamp}</finalName>
+                    <finalName>${project.artifactId}</finalName>
                     <descriptor>/assembly.xml</descriptor>
                 </configuration>
                 <executions>
