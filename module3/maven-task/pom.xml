@@ -6,13 +6,18 @@
     <groupId>com.mtn.training</groupId>
     <artifactId>ci-training</artifactId>
     <packaging>jar</packaging>
-    <version>1.0-SNAPSHOT</version>
+    <version>${maven.build.timestamp}</version>
     <name>maven-task</name>
-
+                      <repositories>
+                        <repository>
+                          <id>proxy</id>
+                          <url>http://localhost/nexus/content/repositories/proxy/</url>
+                        </repository>
+                      </repositories>
 <properties>
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <timestamp>${maven.build.timestamp}</timestamp>
-    <maven.build.timestamp.format>yyyy-MM-dd HH:mm</maven.build.timestamp.format>
+    <maven.build.timestamp.format>yyyy-MM-dd-HH:mm</maven.build.timestamp.format>
 </properties>
 
 <dependencies>
@@ -69,6 +74,36 @@
         <artifactId>sonar-maven-plugin</artifactId>
         <version>3.0.2</version>
       </plugin>
+       <plugin>
+                <groupId>org.wildfly.plugins</groupId>
+                <artifactId>wildfly-maven-plugin</artifactId>
+                <version>1.2.0.Alpha6</version>
+                <configuration>
+                    <hostname>${wildfly-hostname}</hostname>
+                    <port>${wildfly-port}</port>
+                    <username>kamyshev</username>
+                    <password>metalfan</password>
+                    <name>${wildfly-name}</name>
+                </configuration>
+        </plugin>
+        <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-deploy-plugin</artifactId>
+        <version>2.5</version>
+        <configuration>
+          <file>${project.basedir}/target\${project.artifactId}-${project.version}.jar</file>
+          <url>http://localhost/nexus/content/repositories/releases/</url>
+          <repositoryId>localnexus</repositoryId>
+          <username>admin</username>
+          <password>admin123</password>
+
+          <groupId>${project.groupId}</groupId>
+          <artifactId>${project.artifactId}</artifactId>
+          <version>${project.version}</version>
+          <packaging>jar</packaging>
+          <pomFile>pom.xml</pomFile>
+        </configuration>
+        </plugin>
         </plugins>
 </build>
 
