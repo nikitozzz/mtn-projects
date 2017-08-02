@@ -6,7 +6,7 @@
     <groupId>com.mtn.training</groupId>
     <artifactId>ci-training</artifactId>
     <packaging>jar</packaging>
-	<version>${maven.build.timestamp}</version>
+	<version>package${maven.build.timestamp}</version>
     <name>maven-task</name>
 <properties>
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
