@@ -91,7 +91,7 @@
         <artifactId>maven-deploy-plugin</artifactId>
         <version>2.5</version>
         <configuration>
-          <file>${project.basedir}/target\${project.artifactId}-${project.version}.jar</file>
+          <file>${project.basedir}/module3/maven-task/target\${project.artifactId}-${project.version}.jar</file>
           <url>http://localhost:8081/nexus/content/repositories/releases/</url>
           <repositoryId>test</repositoryId>
           <username>admin</username>
