@@ -6,14 +6,15 @@
     <groupId>com.mtn.training</groupId>
     <artifactId>ci-training</artifactId>
     <packaging>jar</packaging>
-    <version>${maven.build.timestamp}</version>
+    <!--<version>${maven.build.timestamp}</version>-->
+	<version>1</version>
     <name>maven-task</name>
-                      <repositories>
+                      <!--<repositories>
                         <repository>
                           <id>proxy</id>
                           <url>http://localhost/nexus/content/repositories/proxy/</url>
                         </repository>
-                      </repositories>
+                      </repositories>-->
 <properties>
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <timestamp>${maven.build.timestamp}</timestamp>
