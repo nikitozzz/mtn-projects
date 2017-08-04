@@ -45,6 +45,10 @@
 		<artifactId>sonar-maven-plugin</artifactId>	
 		<version>5.1</version>
 	</dependency>
+	
+	<pluginGroups>
+		<pluginGroup>org.wildfly.plugins</pluginGroup>
+	</pluginGroups>
 
 </dependencies>
 
