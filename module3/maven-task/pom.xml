@@ -98,6 +98,7 @@
 									<goal>redeploy</goal>
 								</goals>
 						</execution>
+					</executions>
                 </configuration>
 			</plugin>
 			
