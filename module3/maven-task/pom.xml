@@ -77,7 +77,7 @@
        <plugin>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
-               <!-- <version>1.2.0.Alpha6</version> -->
+                <version>1.2.0.Alpha6</version>
                 <configuration>
                     <hostname>${wildfly-hostname}</hostname>
                     <port>${wildfly-port}</port>
