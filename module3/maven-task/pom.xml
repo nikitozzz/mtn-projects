@@ -6,15 +6,9 @@
     <groupId>com.mtn.training</groupId>
     <artifactId>ci-training</artifactId>
     <packaging>jar</packaging>
-    <!--<version>${maven.build.timestamp}</version>-->
-	<version>1</version>
+	<version>${maven.build.timestamp}</version>
     <name>maven-task</name>
-                      <!--<repositories>
-                        <repository>
-                          <id>proxy</id>
-                          <url>http://localhost/nexus/content/repositories/proxy/</url>
-                        </repository>
-                      </repositories>-->
+
 <properties>
 <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <timestamp>${maven.build.timestamp}</timestamp>
@@ -65,7 +59,7 @@
                 <artifactId>maven-assembly-plugin</artifactId>
                 <configuration>
                     <finalName>${project.artifactId}-${project.version}</finalName>
-                    <descriptor>/assembly.xml</descriptor>
+                    <descriptor>${project.basedir}/assembly.xml</descriptor>
                 </configuration>
                 <executions>
                     <execution>
@@ -117,4 +111,3 @@
 
 
 </project>
-<!--TEST -->
