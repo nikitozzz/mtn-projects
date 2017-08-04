@@ -46,10 +46,12 @@
 		<version>5.1</version>
 	</dependency>
 	
-	<pluginGroups>
-		<pluginGroup>org.wildfly.plugins</pluginGroup>
-	</pluginGroups>
-
+	<dependency>
+		<groupId>org.wildfly.plugins</groupId>
+		<artifactId>wildfly-maven-plugin</artifactId>
+		<version>1.2.0.Alpha6</version>
+	</dependency>
+		
 </dependencies>
 
 <build>
