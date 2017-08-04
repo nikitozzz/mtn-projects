@@ -101,10 +101,10 @@
 				<version>2.5</version>
 				<configuration>
 					<file>${project.basedir}/target\${project.artifactId}-${project.version}.jar</file>
-					<url>http://localhost:8081/nexus/content/repositories/releases/</url>
 					<repositoryId>test</repositoryId>
 					<username>admin</username>
 					<password>admin123</password>
+					<url>http://localhost:8081/nexus/content/repositories/releases/</url>
 					<groupId>${project.groupId}</groupId>
 					<artifactId>${project.artifactId}</artifactId>
 					<version>${project.version}</version>
