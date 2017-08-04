@@ -22,29 +22,29 @@
 
 <dependencies>
 
-<dependency>
-<groupId>org.apache.commons</groupId>
-<artifactId>commons-collections4</artifactId>
-<version>4.1</version>
-</dependency>
+	<dependency>
+		<groupId>org.apache.commons</groupId>
+		<artifactId>commons-collections4</artifactId>
+		<version>4.1</version>
+	</dependency>
 
-<dependency>
-<groupId>commons-collections</groupId>
-<artifactId>commons-collections</artifactId>
-<version>3.2.1</version>
-</dependency>
+	<dependency>
+		<groupId>commons-collections</groupId>
+		<artifactId>commons-collections</artifactId>
+		<version>3.2.1</version>
+	</dependency>
 
-<dependency>
-  <groupId>junit</groupId>
-  <artifactId>junit</artifactId>
-  <version>4.11</version>
-</dependency>
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.11</version>
+	</dependency>
 
-<dependency>	
-<groupId>org.codehaus.sonar</groupId>	
-<artifactId>sonar-maven-plugin</artifactId>	
-<version>5.1</version>
-</dependency>
+	<dependency>	
+		<groupId>org.codehaus.sonar</groupId>	
+		<artifactId>sonar-maven-plugin</artifactId>	
+		<version>5.1</version>
+	</dependency>
 
 </dependencies>
 
@@ -69,12 +69,16 @@
                     </execution>
                 </executions>
             </plugin>
-	<plugin>
-        <groupId>org.sonarsource.scanner.maven</groupId>
-        <artifactId>sonar-maven-plugin</artifactId>
-        <version>3.0.2</version>
-      </plugin>
-       <plugin>
+			<plugin>
+				<groupId>org.sonarsource.scanner.maven</groupId>
+				<artifactId>sonar-maven-plugin</artifactId>
+				<version>3.0.2</version>
+			</plugin>
+			
+			<plugin>
+				<pluginGroups>
+					<pluginGroup>org.wildfly.plugins</pluginGroup>
+				</pluginGroups>
                 <groupId>org.wildfly.plugins</groupId>
                 <artifactId>wildfly-maven-plugin</artifactId>
                 <version>1.2.0.Alpha6</version>
@@ -85,25 +89,25 @@
                     <password>admin</password>
                     <name>${wildfly-name}</name>
                 </configuration>
-        </plugin>
-        <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-deploy-plugin</artifactId>
-        <version>2.5</version>
-        <configuration>
-          <file>${project.basedir}/target\${project.artifactId}-${project.version}.jar</file>
-          <url>http://localhost:8081/nexus/content/repositories/releases/</url>
-          <repositoryId>test</repositoryId>
-          <username>admin</username>
-          <password>admin123</password>
-
-          <groupId>${project.groupId}</groupId>
-          <artifactId>${project.artifactId}</artifactId>
-          <version>${project.version}</version>
-          <packaging>jar</packaging>
-          <pomFile>pom.xml</pomFile>
-        </configuration>
-        </plugin>
+			</plugin>
+			
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-deploy-plugin</artifactId>
+				<version>2.5</version>
+				<configuration>
+					<file>${project.basedir}/target\${project.artifactId}-${project.version}.jar</file>
+					<url>http://localhost:8081/nexus/content/repositories/releases/</url>
+					<repositoryId>test</repositoryId>
+					<username>admin</username>
+					<password>admin123</password>
+					<groupId>${project.groupId}</groupId>
+					<artifactId>${project.artifactId}</artifactId>
+					<version>${project.version}</version>
+					<packaging>jar</packaging>
+					<pomFile>pom.xml</pomFile>
+				</configuration>
+			</plugin>
         </plugins>
 </build>
 
