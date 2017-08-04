@@ -91,14 +91,6 @@
                     <username>admin</username>
                     <password>admin</password>
                     <name>${wildfly-name}</name>
-					 <executions>
-						<execution>
-							<phase>install</phase>
-								<goals>
-									<goal>redeploy</goal>
-								</goals>
-						</execution>
-					</executions>
                 </configuration>
 			</plugin>
 			
